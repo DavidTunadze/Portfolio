@@ -1,0 +1,100 @@
+/* Applies to all html pages */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* index.html */
+/* Written in <body> */
+.create-portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+}
+/* The main title is in the center in dark blue. */
+h1{
+    text-align: center;
+    color: darkblue;
+}
+/* The length and width are specified. The background is centered from top to bottom, and evenly spaced from each other. */
+nav ul{
+    position: relative;
+    width: 525px;
+    height: 50px;
+    background: #222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+/*  */
+.link a{
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 25px;
+    z-index: 1;
+}
+/* Acts on the <nav> child <span> tag, which allows <spans> to be applied to the <ul> child <li> with a specific color so that it does not obscure it. */
+nav ul span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 175px;
+    height: 100%;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+/* <nav> First Grandchild Class */
+nav ul .link:nth-child(1):hover~span{
+    left: 0;
+}
+/* <nav> Second Grandchild Class */
+nav ul .link:nth-child(2):hover~span{
+    left: 175px;
+}
+/* <nav> Third Grandchild Class */
+nav ul .link:nth-child(3):hover~span{
+    left: 350px;
+}
+
+/* about.html */
+h2{
+    /* Common tag about.html projects.html skills.html */
+    font-size: 24px;
+    text-decoration: underline;
+}
+/* about.html The image is enclosed in a circle with a black line around it. */
+img[src]{
+    border: 2px solid black;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+/* When I brought the mouse to the picture, it grew in size a little. */
+img:hover{
+    transform: scale(1.05);
+}
+/*  */
+p{
+    /* common tag about.html projects.html */
+    line-height: 1.5;
+    font-size: 16px;
+}
+h3{
+    text-decoration: 20px;
+    color: green;
+}
+
+
+
+
