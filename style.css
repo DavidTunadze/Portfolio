@@ -32,16 +32,23 @@ nav ul{
     align-items: center;
     list-style: none;
 }
-/*  */
+/* This performs the function when the mouse reaches <li> then the color in the background is moved. */
+li{
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+}
+/* It was created to make it work.link a not hidden and to beautify <a> */
 .link a{
-    position: relative;
+    position: relative;/*<a> is placed in front and not covered*/
     display: inline-block;
     font-size: 1em;
     font-weight: 500;
     color: #fff;
     text-decoration: none;
     padding: 0 25px;
-    z-index: 1;
+    z-index: 1;/*<a> is placed in front and not covered*/
 }
 /* Acts on the <nav> child <span> tag, which allows <spans> to be applied to the <ul> child <li> with a specific color so that it does not obscure it. */
 nav ul span{
@@ -52,7 +59,7 @@ nav ul span{
     height: 100%;
     background: linear-gradient(45deg, #4f1919, #ff3333);
     border-radius: 10px;
-    transition: 0.5s;
+    transition: all 0.5s ease;
 }
 /* <nav> First Grandchild Class */
 nav ul .link:nth-child(1):hover~span{
@@ -67,11 +74,25 @@ nav ul .link:nth-child(3):hover~span{
     left: 350px;
 }
 
+
 /* about.html */
+/*  */
 h2{
     /* Common tag about.html projects.html skills.html */
+    text-align: center;
     font-size: 24px;
     text-decoration: underline;
+}
+/* The background is centered next to each other. */
+#about{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background: lightgray;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin: 10px;
+
 }
 /* about.html The image is enclosed in a circle with a black line around it. */
 img[src]{
@@ -84,17 +105,110 @@ img[src]{
 img:hover{
     transform: scale(1.05);
 }
+/* <li> I am erasing the inherent points */
+li{
+    /* index.html skills.html about.html */
+    list-style: none;
+}
 /*  */
 p{
     /* common tag about.html projects.html */
     line-height: 1.5;
     font-size: 16px;
 }
+
+/* projects.html */
+/* Removes the <a> character line. */
+a{
+    /* index.html  projects.html */
+    text-decoration: none;
+}
+/* Acts on a third-degree title */
 h3{
     text-decoration: 20px;
     color: green;
+    box-sizing: content-box;
+    
+}
+/* We place the ID child tags next to each other and at equal distances from each other and from the walls. */
+#Projects{
+    display: flex;
+    justify-content: space-around;
+}
+/* Applies to the first project */
+.projects1{
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Applies to the second project */
+.projects2{
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Applies to the third project */
+.projects3{
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-
-
-
+/* skills.html */
+/* I created it to give me a background with dimensions length width side curvature and color. */
+#skills ul li{
+    width: 525px;
+    height: 75px;
+    background-color: #222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 15px;
+}
+/* I created a class to place <li> next to each other, top to bottom, centered below each other. */
+.li-beautification{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    color: #f4f4f4;
+}
+/* Child tags of this class are placed next to each other and then below each other. */
+.li-beautification li{
+    display: flex;
+    flex-direction: column;
+}
+/* First <li> Rating Score */
+.rating::before{
+    content: "⭐ ⭐ ⭐ ⭐ ⭐";
+    font-size: 24px;
+    color: gold;
+}
+/* Second <li> Rating Score */
+.rating-2::before{
+    content: "⭐ ⭐ ⭐ ";
+    font-size: 24px;
+    color: gold;
+}
+/*Third <li> Rating Score*/
+.rating-3::before{
+    content: "⭐ ⭐";
+    font-size: 24px;
+    color: gold;
+}

@@ -6,27 +6,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- The class was assigned to specifically act on this <body> -->
+<!--The class was assigned to specifically act on this <body>-->
 <body class="create-portfolio">
     <header>
+        <!--The title is displayed at the top of the site center.-->
         <h1> Welcame To My Portfolio </h1>
-        <div>
-            <nav>
-                <ul>
-                    <li class="link">
-                        <a href="about.html"> About </a>
-                    </li>
-                    <li class="link">
-                        <a href="projects.html"> Projects </a>
-                    </li>
-                    <li class="link">
-                        <a href="skills.html"> Skills </a>
-                    </li>
-                    <span></span>
-                </ul>
-            </nav>
-        </div>
+        <!--Below the main title, it displays three titles, each linked to its own html page.-->
+        <nav>
+            <ul>
+                <!--They have a class so that I can act on all three of them simultaneously and equally.-->
+                <li class="link">
+                    <a href="about.html"> <!--There is a link to the about.html page.-->
+                        ABOUT
+                    </a>
+                </li>
+                <li class="link">
+                    <a href="projects.html"><!--There is a link to the projects.html page.-->
+                        PROJECTS
+                    </a>
+                </li>
+                <li class="link">
+                    <a href="skills.html"><!--There is a link to the skills.html page.-->
+                        SKILLS
+                    </a>
+                </li>
+                <!--I added it to create an animation with CSS and placed it on the <nav> so that the name written in the <li> would not be hidden and this name would have a moving background in the background.-->
+                <span></span>
+            </ul>
+        </nav>
     </header> 
-    <footer> @2024 My Portfolio </footer>
+    <footer><!--<nav> down in its center-->
+        <p>
+            &copy;<!--I saw this tag in a book and as far as I can tell it represents copyright protection.
+            -->
+            @2024 My Portfolio
+        </p>
+    </footer>
 </body>
 </html>
